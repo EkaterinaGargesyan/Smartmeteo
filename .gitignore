@@ -1,0 +1,14 @@
+# Jet Brains IDE directory
+.idea/
+
+# Node modules directory
+node_modules/
+
+# Bower dependencies directory
+bower_components/
+
+# Project's information
+info/
+
+# Draft
+draft/
