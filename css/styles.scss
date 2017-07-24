@@ -1,0 +1,78 @@
+/*============================================================================*\
+
+    @@VARIABLES
+
+\*============================================================================*/
+$screen-xs: 500px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+/*============================================================================*\
+
+    @@COMMON PROPERTIES
+
+\*============================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*============================================================================*\
+
+    @@START PAGE
+
+\*============================================================================*/
+
+.start-page {
+  padding: 30vh 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/start-page/start-img.jpg) no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  & h1 {
+    margin: 3vh 3vw;
+    font-size: 100px;
+    color: white;
+  }
+
+  & .start-page__select-region {
+    padding: 0 0 0 50px;
+    width: 310px;
+    height: 40px;
+    background: rgba(255, 255, 255, .5) url(../img/start-page/icon-search.svg) no-repeat 5%;
+    background-size: 25px 25px;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 15px;
+    color: white;
+
+    &::-webkit-input-placeholder {
+      font-size: 15px;
+      color: white;
+    }
+  }
+
+/*============================================================================*\
+
+    @@START PAGE @media
+
+\*============================================================================*/
+    @media (max-width: 550px) {
+    & h1 {
+      font-size: 70px;
+    }
+    & .start-page__select-region {
+      width: 250px;
+      padding: 0 0 0 40px;
+    }
+  }
+}
+

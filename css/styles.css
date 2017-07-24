@@ -1,0 +1,54 @@
+/*============================================================================*
+    @@VARIABLES
+
+\*============================================================================*/
+/*============================================================================*
+    @@COMMON PROPERTIES
+
+\*============================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  outline: none; }
+
+a {
+  text-decoration: none; }
+
+/*============================================================================*
+    @@START PAGE
+
+\*============================================================================*/
+.start-page {
+  padding: 30vh 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/start-page/start-img.jpg) no-repeat;
+  background-size: cover;
+  text-align: center;
+  /*============================================================================*
+    @@START PAGE @media
+
+\*============================================================================*/ }
+  .start-page h1 {
+    margin: 3vh 3vw;
+    font-size: 100px;
+    color: white; }
+  .start-page .start-page__select-region {
+    padding: 0 0 0 50px;
+    width: 310px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.5) url(../img/start-page/icon-search.svg) no-repeat 5%;
+    background-size: 25px 25px;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 15px;
+    color: white; }
+    .start-page .start-page__select-region::-webkit-input-placeholder {
+      font-size: 15px;
+      color: white; }
+  @media (max-width: 550px) {
+    .start-page h1 {
+      font-size: 70px; }
+    .start-page .start-page__select-region {
+      width: 250px;
+      padding: 0 0 0 40px; } }
