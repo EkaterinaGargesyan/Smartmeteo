@@ -1,3 +1,5 @@
+var dataWeather = [];
+
 function query(place) {
     var query = new XMLHttpRequest();
 
