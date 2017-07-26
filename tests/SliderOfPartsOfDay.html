@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div.container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background: url("./background-for-slider.jpeg");
+        }
+        div.slider {
+            position: absolute;
+            top: 15vh;
+            left: 20vw;
+
+            width: 60vw;
+            height: 1vh;
+            border-top: 1px solid rgba(255, 255, 255, .6);
+        }
+        div.thumb {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8vw;
+            height: 1vh;
+            background: rgba(255, 255, 255, .6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slider">
+            <div class="thumb"></div>
+            <button type="button" class="slider__night"></button>
+            <button type="button" class="slider__night"></button>
+            <button type="button" class="slider__night"></button>
+            <button type="button" class="slider__night"></button>
+        </div>
+    </div>
+
+</body>
+</html>
