@@ -19,36 +19,61 @@ a {
 
 \*============================================================================*/
 .start-page {
-  padding: 30vh 0;
+  padding: 25vh 0;
   width: 100vw;
   height: 100vh;
-  background: url(../img/start-page/start-img.jpg) no-repeat;
+  background: url(../img/startPage/start-img.jpeg) no-repeat;
   background-size: cover;
   text-align: center;
   /*============================================================================*
     @@START PAGE @media
 
 \*============================================================================*/ }
-  .start-page h1 {
-    margin: 3vh 3vw;
-    font-size: 100px;
-    color: white; }
+  .start-page .start-page__logo {
+    display: block;
+    margin: 0 auto 5vh auto;
+    width: 370px; }
   .start-page .start-page__select-region {
     padding: 0 0 0 50px;
-    width: 310px;
+    width: 350px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.5) url(../img/start-page/icon-search.svg) no-repeat 5%;
+    background: rgba(255, 255, 255, 0.4) url(../img/startPage/icon-search.svg) no-repeat 5%;
     background-size: 25px 25px;
-    border: 1px solid white;
-    border-radius: 20px;
+    border: none;
     font-size: 15px;
     color: white; }
     .start-page .start-page__select-region::-webkit-input-placeholder {
-      font-size: 15px;
+      font-size: 16px;
       color: white; }
-  @media (max-width: 550px) {
-    .start-page h1 {
-      font-size: 70px; }
+    .start-page .start-page__select-region:focus {
+      background: rgba(0, 0, 0, 0.5) url(../img/startPage/icon-search.svg) no-repeat 5%;
+      background-size: 25px 25px; }
+  @media (max-width: 500px) {
+    .start-page .start-page__logo {
+      width: 290px; }
     .start-page .start-page__select-region {
       width: 250px;
       padding: 0 0 0 40px; } }
+
+/*============================================================================*
+    @@AUTOCOMPLETE GOOGLE API
+
+\*============================================================================*/
+.pac-container {
+  background: rgba(255, 255, 255, 0.4); }
+
+.pac-item {
+  font-size: 15px;
+  color: white; }
+  .pac-item:hover {
+    background: rgba(0, 0, 0, 0.5); }
+
+.pac-item-selected {
+  background: rgba(0, 0, 0, 0.5); }
+
+.pac-item-query {
+  font-weight: bold;
+  color: black; }
+
+.pac-icon {
+  background: url("../img/startPage/icon-location.svg") no-repeat; }

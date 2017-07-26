@@ -5,6 +5,12 @@ autocomplete.addListener("place_changed", function () {
     find(placeResult, function(coords){
         query(coords).addEventListener("load", function () {
             console.log(dataWeather.current.condition.text);
+
+
+
+
+
+
         });
     });
 });
