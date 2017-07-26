@@ -1,6 +1,6 @@
 // make form witn autocomplete for return place
 var autocomplete = new google.maps.places.Autocomplete(
-    (document.querySelector(".start-page__select-region")),
+    (document.querySelector(".select-region")),
     {types: ["(cities)"],
         /*componentRestrictions: {country: "us"}*/
     });

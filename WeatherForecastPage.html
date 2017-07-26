@@ -5,32 +5,36 @@
     <title>Smartmeteo - Weather forecast</title>
     <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./css/styles.css">
-
-    <style>
-        div.state {
-            margin: 100px;
-            width: 100px;
-            height: 100px;
-        }
-    </style>
 </head>
 <body>
+    <div class="container-bg js-container-bg-afternoon">
+        <div class="container-img js-container-img-afternoon">
+            <input class="select-region select-region-small-size" type="text" placeholder="select region">
 
-    <div class="state"></div>
+            <div class="slider">
+                <button type="button" class="slider__btn">Night</button>
+                <button type="button" class="slider__btn">Morning</button>
+                <button type="button" class="slider__btn">Afternoon</button>
+                <button type="button" class="slider__btn">Evening</button>
+                <div class="slider-bar">
+                    <div class="thumb"></div>
+                </div>
+            </div>
+        </div>
 
-
-
-
-
+       
+    </div>
 
     <script src="./js/libraries/jquery-3.2.1.min.js"></script>
     <script src="./js/libraries/tether.min.js"></script>
     <script src="./js/libraries/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPDrN0QLT_F-VKJP-MkwhpaEoBLle7uxc&libraries=places"></script>
 
-    <script src="./js/QueryForecastWeather.js"></script>
     <script src="./js/AutocompleteRegions&GeocodingCoords.js"></script>
+    <script src="./js/QueryForecastWeather.js"></script>
     <script src="./js/GetForecastWeather.js"></script>
+    <script src="./js/Time.js"></script>
     <script src="./js/IndicatorsOfWeather.js"></script>
+
 </body>
 </html>

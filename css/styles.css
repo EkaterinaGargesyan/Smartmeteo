@@ -29,31 +29,43 @@ a {
     @@START PAGE @media
 
 \*============================================================================*/ }
-  .start-page .start-page__logo {
+  .start-page .logo {
     display: block;
     margin: 0 auto 5vh auto;
     width: 370px; }
-  .start-page .start-page__select-region {
-    padding: 0 0 0 50px;
-    width: 350px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.4) url(../img/startPage/icon-search.svg) no-repeat 5%;
-    background-size: 25px 25px;
-    border: none;
-    font-size: 15px;
-    color: white; }
-    .start-page .start-page__select-region::-webkit-input-placeholder {
-      font-size: 16px;
-      color: white; }
-    .start-page .start-page__select-region:focus {
-      background: rgba(0, 0, 0, 0.5) url(../img/startPage/icon-search.svg) no-repeat 5%;
-      background-size: 25px 25px; }
   @media (max-width: 500px) {
     .start-page .start-page__logo {
       width: 290px; }
     .start-page .start-page__select-region {
       width: 250px;
       padding: 0 0 0 40px; } }
+
+/*============================================================================*
+    @@INPUT SELECT-REGION
+
+\*============================================================================*/
+.select-region {
+  padding: 0 0 0 50px;
+  width: 350px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.4) url(../img/startPage/icon-search.svg) no-repeat 5%;
+  background-size: 25px 25px;
+  border: none;
+  font-size: 16px;
+  color: white; }
+  .select-region::-webkit-input-placeholder {
+    color: white; }
+  .select-region:focus {
+    background: rgba(0, 0, 0, 0.5) url(../img/startPage/icon-search.svg) no-repeat 5%;
+    background-size: 25px 25px; }
+
+.select-region-small-size {
+  margin: 20px 2vw;
+  float: right;
+  width: 225px;
+  height: 30px;
+  background-size: 20px 20px;
+  font-size: 15px; }
 
 /*============================================================================*
     @@AUTOCOMPLETE GOOGLE API
@@ -77,3 +89,92 @@ a {
 
 .pac-icon {
   background: url("../img/startPage/icon-location.svg") no-repeat; }
+
+/*============================================================================*
+    @@WEATHER FORECAST PAGE
+    @@BACKGROUND (IN DEPENDS ON PARTS OF DAY)
+
+\*============================================================================*/
+.js-container-bg-night {
+  background: url("../img/weatherForecastPage/background-morning.jpeg") no-repeat; }
+
+.js-container-bg-morning {
+  background: url("../img/weatherForecastPage/background-morning.jpeg") no-repeat; }
+
+.js-container-bg-afternoon {
+  background: url("../img/weatherForecastPage/background-morning.jpeg") no-repeat; }
+
+.js-container-bg-evening {
+  background: url("../img/weatherForecastPage/background-morning.jpeg") no-repeat; }
+
+.container-bg {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover; }
+
+.js-container-img-night {
+  background: url("../img/weatherForecastPage/img-morning.jpeg") no-repeat; }
+
+.js-container-img-morning {
+  background: url("../img/weatherForecastPage/img-morning.jpeg") no-repeat; }
+
+.js-container-img-afternoon {
+  background: url("../img/weatherForecastPage/img-morning.jpeg") no-repeat; }
+
+.js-container-img-evening {
+  background: url("../img/weatherForecastPage/img-morning.jpeg") no-repeat; }
+
+.container-img {
+  position: absolute;
+  margin: 6vh 7vw;
+  width: 86vw;
+  height: 88vh;
+  background-size: cover; }
+
+/*============================================================================*
+    @@SLIDER-BAR (NIGHT, MORNING, AFTERNOON, EVENING)
+
+\*============================================================================*/
+.slider {
+  position: absolute;
+  top: 65px;
+  left: 13vw;
+  width: 60vw;
+  height: 25px; }
+
+.slider__btn {
+  position: absolute;
+  width: 70px;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6); }
+  .slider__btn:nth-child(2) {
+    left: 17vw; }
+  .slider__btn:nth-child(3) {
+    left: 36vw; }
+  .slider__btn:nth-child(4) {
+    right: 0; }
+  .slider__btn:hover {
+    background: rgba(255, 255, 255, 0.6); }
+  .slider__btn:active {
+    transform: scale(0.95); }
+
+.slider-bar {
+  position: absolute;
+  top: 17px;
+  width: 60vw;
+  height: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.6); }
+
+.thumb {
+  position: absolute;
+  width: 70px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.6); }
+
+/*============================================================================*
+    @@ACCORDION
+
+\*============================================================================*/

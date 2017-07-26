@@ -51,14 +51,6 @@ var stateOfWeather = {
     ]
 };
 
-function getCurrentTime() {
-    var time = dataWeather.location.localtime.split(" ");
-    var hour = time[1].split(":");
-    var currentHour = +hour[0];
-
-    return currentHour;
-}
-
 function renderIconStateOfWeather(index) {
     var icon = document.createElement("img");
     icon.setAttribute("class", "iconStateOfWeather");

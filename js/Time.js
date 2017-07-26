@@ -7,7 +7,3 @@ function getCurrentTime() {
 
     return currentHour;
 }
-
-/*if(0 <= currentHour && currentHour < 6){
-    console.log(currentHour);
-}*/
