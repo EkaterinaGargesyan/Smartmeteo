@@ -14,3 +14,10 @@ function getTime(data) {
 
     return currentHour;
 }
+
+var partsOfDay = {
+    morning: getTime() >= 6 && getTime() < 12,
+    afternoon: getTime() >= 12 && getTime() < 18,
+    evening: getTime() >= 18 && getTime() < 24,
+    night: getTime() >= 24 && getTime() < 6
+}

@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="container-bg js-container-bg-afternoon">
-        <div class="container-img js-container-img-afternoon">
+    <div class="container-bg js-container-bg-morning">
+        <div class="container-img js-container-img-morning">
 
             <!--BLOCK - SELECT REGION-->
             <div class="container">
@@ -28,9 +28,9 @@
                     <div class="col-md-12 col-lg-12">
                         <div class="slider-btns">
                             <button type="button" class="slider__btn morning">Morning</button>
-                            <button type="button" class="slider__btn night">Night</button>
                             <button type="button" class="slider__btn afternoon">Afternoon</button>
                             <button type="button" class="slider__btn evening">Evening</button>
+                            <button type="button" class="slider__btn night">Night</button>
                         </div>
 
                         <div class="slider-bar">
@@ -300,7 +300,9 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPDrN0QLT_F-VKJP-MkwhpaEoBLle7uxc&libraries=places"></script>
 
 
+<!--
     <script src="./tests/testDataWeather.js"></script>
+-->
 
 
 
@@ -308,17 +310,17 @@
     <script src="./js/QueryForecastWeather.js"></script>
     <script src="./js/GetForecastWeather.js"></script>-->
     <script src="./js/Time.js"></script>
-    <script src="js/IconOfWeather.js"></script>
+    <script src="./js/IconOfWeather.js"></script>
     <script src="./js/FillInWeatherTable.js"></script>
     <script src="./js/FillInCurrentWeather.js"></script>
 
-    <script>
+    <!--<script>
          renderIconStateOfWeather(dataWeather.current.condition.code, ".stateIcon img");
 
          fillInTableWeather(dataWeather, ".table-weather-header");
          fillInTableWeather(dataWeather, ".table-weather");
          fillInCurrentWeather(dataWeather);
-    </script>
+    </script>-->
 
 </body>
 </html>

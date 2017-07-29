@@ -139,17 +139,17 @@ a {
 
 \*============================================================================*/
 
-.js-container-bg-night {
-  background: url("../img/weatherForecastPage/background-morning.jpeg") no-repeat;
-}
 .js-container-bg-morning {
-  background: url("../img/weatherForecastPage/background-morning.jpeg") no-repeat;
+  background: url("../img/weatherForecastPage/background-morning.jpg") no-repeat;
 }
 .js-container-bg-afternoon {
-  background: url("../img/weatherForecastPage/background-morning.jpeg") no-repeat;
+  background: url("../img/weatherForecastPage/background-afternoon.jpg") no-repeat;
 }
 .js-container-bg-evening {
-  background: url("../img/weatherForecastPage/background-morning.jpeg") no-repeat;
+  background: url("../img/weatherForecastPage/background-evening.jpg") no-repeat;
+}
+.js-container-bg-night {
+  background: url("../img/weatherForecastPage/background-night.jpg") no-repeat;
 }
 
 .container-bg {
@@ -158,17 +158,17 @@ a {
   background-size: cover;
 }
 
-.js-container-img-night {
-  background: url("../img/weatherForecastPage/img-morning.jpeg") no-repeat;
-}
 .js-container-img-morning {
-  background: url("../img/weatherForecastPage/img-morning.jpeg") no-repeat;
+  background: url("../img/weatherForecastPage/img-morning.jpg") no-repeat;
 }
 .js-container-img-afternoon {
-  background: url("../img/weatherForecastPage/img-morning.jpeg") no-repeat;
+  background: url("../img/weatherForecastPage/img-afternoon.jpg") no-repeat;
 }
 .js-container-img-evening {
-  background: url("../img/weatherForecastPage/img-morning.jpeg") no-repeat;
+  background: url("../img/weatherForecastPage/img-evening.jpg") no-repeat;
+}
+.js-container-img-night {
+  background: url("../img/weatherForecastPage/img-night.jpg") no-repeat;
 }
 
 .container-img {
@@ -209,11 +209,12 @@ a {
     size: 15px;
     weight: 500;
   }
-  color: rgba(255, 255, 255, .8);
+  color: #F0F8FF;
 
-  &.night { left: 17vw; }
-  &.afternoon { left: 36vw; }
-  &.evening { right: 0; }
+  &.morning { left: 0 }
+  &.afternoon { left: 17vw; }
+  &.evening { left: 36vw; }
+  &.night { right: 0; }
 
   &:hover {
     background: rgba(255, 255, 255, .6);
@@ -234,6 +235,23 @@ a {
   width: 80px;
   height: 5px;
   background: rgba(255, 255, 255, .6);
+
+  &.morningPos {
+    left: 0;
+    transition: left 1s ease-in-out;
+  }
+  &.afternoonPos {
+    left: 17px;
+    transition: left 1s ease-in-out;
+  }
+  &.eveningPos {
+    left: 36px;
+    transition: left 1s ease-in-out;
+  }
+  &.nightPos{
+    right: 17px;
+    transition: right 1s ease-in-out;
+  }
 }
 
 /*============================================================================*\
@@ -273,21 +291,21 @@ a {
 
 \*============================================================================*/
 .card {
-  background-color: rgba(255, 255, 255, .4);
+  background-color: rgba(0, 0, 0, .4);
   border: none;
   border-radius: 0;
   font: {
     family: "Verdana", sans-serif;
     size: 17px;
   }
-  color: white;
+  color: #F0F8FF;
 }
 
 .card-header a {
   padding: 5px 10px;
   font-size: 15px;
   font-weight: bold;
-  color: rgba(0, 0, 0, .6);
+  color: rgba(0, 0, 0, .8);
 
   &:hover {
     background-color: rgba(255, 255, 255, .6);
@@ -300,7 +318,7 @@ a {
 .card .card-header,
 .card .card-block{
   padding: 5px;
-  background-color: rgba(255, 255, 255, .05);
+  background-color: rgba(0, 0, 0, .05);
   border: .5px solid rgba(255, 255, 255, .4);
   border-radius: 0;
 }
@@ -325,7 +343,7 @@ a {
 
 .table-weather tr:hover {
   background-color: rgba(255, 255, 255, .7);
-  color: rgba(0, 0, 0, .7);
+  color: rgba(0, 0, 0, .9);
 }
 .icon-header-table,
 .icon-table {
