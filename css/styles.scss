@@ -3,7 +3,7 @@
     @@VARIABLES
 
 \*============================================================================*/
-$screen-xs: 500px;
+$screen-xs: 576px;
 $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
@@ -16,11 +16,12 @@ $screen-lg: 1200px;
 * {
   margin: 0;
   padding: 0;
-  outline: none;
+  outline: none !important;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+  cursor: default;
 }
 
 /*============================================================================*\
@@ -52,7 +53,7 @@ a {
         width: 290px;
       }
 
-      & .start-page__select-region {
+      & .select-region {
         width: 250px;
         padding: 0 0 0 40px;
       }
@@ -71,7 +72,10 @@ a {
   background: rgba(255, 255, 255, .4) url(../img/startPage/icon-search.svg) no-repeat 5%;
   background-size: 25px 25px;
   border: none;
-  font-size: 16px;
+  font: {
+    family: "Verdana", sans-serif;
+    size: 16px;
+  }
   color: white;
 
   &::-webkit-input-placeholder {
@@ -90,7 +94,7 @@ a {
   width: 225px;
   height: 30px;
   background-size: 20px 20px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 /*============================================================================*\
@@ -100,6 +104,10 @@ a {
 \*============================================================================*/
 .pac-container {
   background: rgba(255, 255, 255, .4);
+  font: {
+    family: "Verdana", sans-serif;
+    size: 15px;
+  }
 }
 
 .pac-item {
@@ -177,32 +185,35 @@ a {
 
 \*============================================================================*/
 .slider {
-  position: absolute;
-  top: 65px;
-  left: 13vw;
-
+  margin: 0 auto;
   width: 60vw;
   height: 25px;
 }
 
+.slider>.col-md-12.col-lg-12 {
+  padding: 0;
+}
+
+.slider-btns{
+  width: 60vw;
+  height: 17px;
+}
+
 .slider__btn {
   position: absolute;
-  width: 70px;
+  width: 80px;
   border: none;
   background: transparent;
-  font-size: 15px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, .6);
+  font: {
+    family: "Verdana", sans-serif;
+    size: 15px;
+    weight: 500;
+  }
+  color: rgba(255, 255, 255, .8);
 
-  &:nth-child(2){
-    left: 17vw;
-  }
-  &:nth-child(3){
-    left: 36vw;
-  }
-  &:nth-child(4){
-    right: 0;
-  }
+  &.night { left: 17vw; }
+  &.afternoon { left: 36vw; }
+  &.evening { right: 0; }
 
   &:hover {
     background: rgba(255, 255, 255, .6);
@@ -213,8 +224,6 @@ a {
 }
 
 .slider-bar {
-  position: absolute;
-  top: 17px;
   width: 60vw;
   height: 6px;
   border-top: 1px solid rgba(255, 255, 255, .6);
@@ -222,9 +231,40 @@ a {
 
 .thumb {
   position: absolute;
-  width: 70px;
+  width: 80px;
   height: 5px;
   background: rgba(255, 255, 255, .6);
+}
+
+/*============================================================================*\
+
+    @@STATE OF CURRENT WEATHER
+
+\*============================================================================*/
+.state-of-weather{
+  margin: 20px 0;
+  height: 19vh;
+}
+.state-of-weather__indicators {
+  border: .5px solid rgba(255, 255, 255, .4);
+
+  &.windspeed {
+    background: rgba(255, 255, 255, .2) url("../img/iconsTolls/windspeed.svg") no-repeat 10% 50%;
+    background-size: 60px;
+  }
+  &.temp {
+    background: rgba(255, 255, 255, .2) url("../img/iconsTolls/temp.svg") no-repeat 10% 50%;
+    background-size: 60px;
+
+  }
+  &.temp-fillslike {
+    background: rgba(255, 255, 255, .2) url("../img/iconsTolls/tempFeelslike.svg") no-repeat 10% 50%;
+    background-size: 80px;
+  }
+  &.humidity {
+    background: rgba(255, 255, 255, .2) url("../img/iconsTolls/humidity.png") no-repeat 10% 50%;
+    background-size: 70px;
+  }
 }
 
 /*============================================================================*\
@@ -232,8 +272,64 @@ a {
     @@ACCORDION
 
 \*============================================================================*/
-#accordion{
+.card {
+  background-color: rgba(255, 255, 255, .4);
+  border: none;
+  border-radius: 0;
+  font: {
+    family: "Verdana", sans-serif;
+    size: 17px;
+  }
+  color: white;
+}
 
+.card-header a {
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, .6);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, .6);
+  }
+  &:active {
+    color: rgb(0, 0, 0);
+  }
+}
+
+.card .card-header,
+.card .card-block{
+  padding: 5px;
+  background-color: rgba(255, 255, 255, .05);
+  border: .5px solid rgba(255, 255, 255, .4);
+  border-radius: 0;
+}
+
+.card .card-header {
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.table-weather-header,
+.table-weather {
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+}
+
+.table-weather-header td,
+.table-weather td{
+  height: 32px;
+  font-size: 15px;
+  cursor: default;
+}
+
+.table-weather tr:hover {
+  background-color: rgba(255, 255, 255, .7);
+  color: rgba(0, 0, 0, .7);
+}
+.icon-header-table,
+.icon-table {
+  width: 30px;
 }
 
 

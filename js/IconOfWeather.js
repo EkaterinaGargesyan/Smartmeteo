@@ -50,38 +50,3 @@ var stateOfWeather = {
         [   "./img/iconsStateOfWeather/wind.svg" ]
     ]
 };
-
-function renderIconStateOfWeather(index) {
-    var icon = document.createElement("img");
-    icon.setAttribute("class", "iconStateOfWeather");
-
-    if(stateOfWeather.icon[index].length > 1) {
-        var lightDay = getCurrentTime() >= 6  && getCurrentTime() < 22;
-
-        lightDay
-        ? icon.setAttribute("src", stateOfWeather.icon[index][0])
-        : icon.setAttribute("src", stateOfWeather.icon[index][1]);
-
-    } else {
-        icon.setAttribute("src", stateOfWeather.icon[index][0])
-    }
-
-    document.querySelector("div.state").appendChild(icon);
-}
-
-stateOfWeather.codes.forEach(function (category, index) {
-    if(category.length > 1){
-        category.forEach(function (code) {
-            if(dataWeather.current.condition.code === code) {
-                renderIconStateOfWeather(index);
-            }
-        })
-    } else {
-
-        if(dataWeather.current.condition.code === category[0]) {
-            renderIconStateOfWeather(index);
-        }
-    }
-});
-
-

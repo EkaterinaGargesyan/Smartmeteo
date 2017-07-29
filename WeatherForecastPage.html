@@ -2,39 +2,323 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>Smartmeteo - Weather forecast</title>
-    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <div class="container-bg js-container-bg-afternoon">
         <div class="container-img js-container-img-afternoon">
-            <input class="select-region select-region-small-size" type="text" placeholder="select region">
 
-            <div class="slider">
-                <button type="button" class="slider__btn">Night</button>
-                <button type="button" class="slider__btn">Morning</button>
-                <button type="button" class="slider__btn">Afternoon</button>
-                <button type="button" class="slider__btn">Evening</button>
-                <div class="slider-bar">
-                    <div class="thumb"></div>
+            <!--BLOCK - SELECT REGION-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <input class="select-region select-region-small-size" type="text" placeholder="select region">
+                    </div>
+                </div>
+            </div>
+
+            <!--BLOCK - SLIDER-->
+            <div class="container">
+                <div class="row slider">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="slider-btns">
+                            <button type="button" class="slider__btn morning">Morning</button>
+                            <button type="button" class="slider__btn night">Night</button>
+                            <button type="button" class="slider__btn afternoon">Afternoon</button>
+                            <button type="button" class="slider__btn evening">Evening</button>
+                        </div>
+
+                        <div class="slider-bar">
+                            <div class="thumb"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--BLOCK - STATE OF CURRENT WEATHER-->
+            <div class="container">
+                <div class="row state-of-weather">
+                    <div class="col-md-2 offset-md-1 state-of-weather__indicators windspeed">
+                        <span> mph</span>
+                    </div>
+                    <div class="col-md-2 state-of-weather__indicators temp">
+                        <span> °C</span>
+                    </div>
+                    <div class="col-md-2 state-of-weather__icon stateIcon">
+                        <img alt="icon">
+                    </div>
+                    <div class="col-md-2 state-of-weather__indicators temp-fillslike">
+                        <span> %</span>
+                    </div>
+                    <div class="col-md-2 state-of-weather__indicators humidity">
+                        <span> mb</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--BLOCK - ACCORDION-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+                        <div id="accordion" role="tablist" aria-multiselectable="true">
+
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingOne">
+                                    <table class="table-weather-header">
+                                        <tr>
+                                            <td>
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"></a>
+                                            </td>
+                                            <td><img alt="icon" class="icon-header-table js-icon-header-table-1"></td>
+                                            <td><span> °C</span></td>
+                                            <td><span> °C</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="card-block">
+                                        <table class="table-weather">
+                                            <tr>
+                                                <td>06:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-1-1"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>12:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-1-2"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>18:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-1-3"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>24:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-1-4"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingTwo">
+                                    <table class="table-weather-header">
+                                        <tr>
+                                            <td><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"></a></td>
+                                            <td><img alt="icon" class="icon-header-table js-icon-header-table-2"></td>
+                                            <td><span> °C</span></td>
+                                            <td><span> °C</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="card-block">
+                                        <table class="table-weather">
+                                            <tr>
+                                                <td>06:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-2-1"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>12:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-2-2"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>18:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-2-3"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>24:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-2-4"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingThree">
+                                    <table class="table-weather-header">
+                                        <tr>
+                                            <td><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"></a></td>
+                                            <td><img alt="icon" class="icon-header-table js-icon-header-table-3"></td>
+                                            <td><span> °C</span></td>
+                                            <td><span> °C</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="card-block">
+                                        <table class="table-weather">
+                                            <tr>
+                                                <td>06:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-3-1"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>12:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-3-2"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>18:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-3-3"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>24:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-3-4"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingFour">
+                                    <table class="table-weather-header">
+                                        <tr>
+                                            <td><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"></a></td>
+                                            <td><img alt="icon" class="icon-header-table js-icon-header-table-4"></td>
+                                            <td><span> °C</span></td>
+                                            <td><span> °C</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                                    <div class="card-block">
+                                        <table class="table-weather">
+                                            <tr>
+                                                <td>06:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-4-1"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>12:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-4-2"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>18:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-4-3"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>24:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-4-4"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingFive">
+                                    <table class="table-weather-header">
+                                        <tr>
+                                            <td><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive"></a></td>
+                                            <td><img alt="icon" class="icon-header-table js-icon-header-table-5"></td>
+                                            <td><span> °C</span></td>
+                                            <td><span> °C</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+                                    <div class="card-block">
+                                        <table class="table-weather">
+                                            <tr>
+                                                <td>06:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-5-1"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>12:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-5-2"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>18:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-5-3"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>24:00</td>
+                                                <td><img alt="icon" class="icon-table js-icon-table-5-4"></td>
+                                                <td><span> °C</span></td>
+                                                <td><span> °C</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-       
     </div>
+
+
 
     <script src="./js/libraries/jquery-3.2.1.min.js"></script>
     <script src="./js/libraries/tether.min.js"></script>
     <script src="./js/libraries/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPDrN0QLT_F-VKJP-MkwhpaEoBLle7uxc&libraries=places"></script>
 
-    <script src="./js/AutocompleteRegions&GeocodingCoords.js"></script>
+
+    <script src="./tests/testDataWeather.js"></script>
+
+
+
+    <!--<script src="./js/AutocompleteRegions&GeocodingCoords.js"></script>
     <script src="./js/QueryForecastWeather.js"></script>
-    <script src="./js/GetForecastWeather.js"></script>
+    <script src="./js/GetForecastWeather.js"></script>-->
     <script src="./js/Time.js"></script>
-    <script src="./js/IndicatorsOfWeather.js"></script>
+    <script src="js/IconOfWeather.js"></script>
+    <script src="./js/FillInWeatherTable.js"></script>
+    <script src="./js/FillInCurrentWeather.js"></script>
+
+    <script>
+         renderIconStateOfWeather(dataWeather.current.condition.code, ".stateIcon img");
+
+         fillInTableWeather(dataWeather, ".table-weather-header");
+         fillInTableWeather(dataWeather, ".table-weather");
+         fillInCurrentWeather(dataWeather);
+    </script>
 
 </body>
 </html>

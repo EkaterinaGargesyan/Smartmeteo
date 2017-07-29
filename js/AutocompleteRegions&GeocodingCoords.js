@@ -6,7 +6,7 @@ var autocomplete = new google.maps.places.Autocomplete(
     });
 
 // find coordinates place which user type-in search-form
-function find (address, cb) {
+function find(address, cb) {
     var geocoder = new google.maps.Geocoder;
     geocoder.geocode({"address": address}, function(results) {
         var lat = results[0].geometry.location.lat();
