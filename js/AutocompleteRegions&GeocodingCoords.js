@@ -16,3 +16,15 @@ function find(address, cb) {
         cb(coords);
     });
 }
+
+autocomplete.addListener("place_changed", function () {
+    var placeResult = autocomplete.getPlace().formatted_address;
+
+    find(placeResult, function(coords){
+        query(coords).addEventListener("load", function () {
+
+            document.location.href = "./WeatherForecastPage.html";
+
+        });
+    });
+});
