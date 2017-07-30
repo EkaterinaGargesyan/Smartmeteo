@@ -1,3 +1,4 @@
+// Get weather data in header table for 5 days
 function getDataForHeaderTableWeather(data, cell, i, indexDay) {
     var dataWeatherInDay = data.forecast.forecastday[indexDay].day;
 
@@ -6,7 +7,7 @@ function getDataForHeaderTableWeather(data, cell, i, indexDay) {
             cell.firstElementChild.appendChild(document.createTextNode(getDate(data, indexDay)));
             break;
         case 1:
-            renderIconStateOfWeather(dataWeatherInDay.condition.code, `.js-icon-header-table-${indexDay +1}`);
+            setIconStateOfWeather(dataWeatherInDay.condition.code, `.js-icon-header-table-${indexDay +1}`);
             break;
         case 2:
             cell.insertBefore(
@@ -22,6 +23,8 @@ function getDataForHeaderTableWeather(data, cell, i, indexDay) {
             break;
     }
 }
+
+// Get weather data in table for 5 days
 function getDataForTableWeather(data, cell, i, indexDay, indexRow) {
     var hours = [5, 11, 17, 23];
     var dataWeatherInHour = data.forecast.forecastday[indexDay].hour[hours[indexRow]];
@@ -30,7 +33,7 @@ function getDataForTableWeather(data, cell, i, indexDay, indexRow) {
         case 0:
             break;
         case 1:
-            renderIconStateOfWeather(dataWeatherInHour.condition.code, `.js-icon-table-${indexDay +1}-${indexRow +1}`);
+            setIconStateOfWeather(dataWeatherInHour.condition.code, `.js-icon-table-${indexDay +1}-${indexRow +1}`);
             break;
         case 2:
             cell.insertBefore(
@@ -47,6 +50,7 @@ function getDataForTableWeather(data, cell, i, indexDay, indexRow) {
     }
 }
 
+// Set weather data in table for 5 days
 function fillInTableWeather(data, tableArray) {
     document
         .querySelectorAll(tableArray)

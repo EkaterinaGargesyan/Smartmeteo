@@ -1,3 +1,4 @@
+//Query to apixu.com for getting weather data
 function query(place) {
     var query = new XMLHttpRequest();
 
@@ -7,12 +8,13 @@ function query(place) {
     return query;
 }
 
-//post a query
+//Post a query
 function postQuery(coords) {
 
-    //handling action on loading query response
-     query(coords).addEventListener("load", function (event) {
-         localStorage.setItem("dataWeather", event.currentTarget.responseText);
+
+    //Handling action on loading query response
+    query(coords).addEventListener("load", function (event) {
+        localStorage.setItem("dataWeather", event.currentTarget.responseText);
          
         //  var path = document.location.pathname.split("/");
 

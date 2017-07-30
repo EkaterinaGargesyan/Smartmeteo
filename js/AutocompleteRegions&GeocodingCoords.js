@@ -1,13 +1,11 @@
-// make form witn autocomplete for return place
+// Make form witn autocomplete for return place
 var autocomplete = new google.maps.places.Autocomplete(
     (document.querySelector(".select-region")),
     {types: ["(cities)"],
         /*componentRestrictions: {country: "us"}*/
     });
 
-// find coordinates place which user type-in search-form
-
-
+// Find coordinates place which user type-in search-form
 function find(address) {
     var geocoder = new google.maps.Geocoder;
     geocoder.geocode({"address": address}, function(results) {

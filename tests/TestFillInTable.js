@@ -14,7 +14,7 @@ function fillInHeaderTableWeather(data) {
                         cell.firstElementChild.appendChild(textnode);
                         break;
                     case 1:
-                        renderIconStateOfWeather(dataWeatherInDay.condition.code, `.js-icon-header-table-${indexDay}`);
+                        setIconStateOfWeather(dataWeatherInDay.condition.code, `.js-icon-header-table-${indexDay}`);
                         break;
                     case 2:
                         textnode = document.createTextNode(dataWeatherInDay.avgtemp_c);
@@ -44,7 +44,7 @@ function fillInTableWeather(data) {
                         case 0:
                             break;
                         case 1:
-                            renderIconStateOfWeather(dataWeatherInHour.condition.code, `.js-icon-table-${indexDay}-${indexRow}`);
+                            setIconStateOfWeather(dataWeatherInHour.condition.code, `.js-icon-table-${indexDay}-${indexRow}`);
                             break;
                         case 2:
                             var textnode = document.createTextNode(dataWeatherInHour.temp_c);
