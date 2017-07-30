@@ -42,6 +42,8 @@ function fillInDataByTimeOfDay(data) {
                 data.forecast.forecastday["0"].hour[hour].pressure_mb
             ];
 
+            switchBgOnClick(btn);
+
             setDataWeatherForCurrentDay(
                 weatherByHour,
                 data.forecast.forecastday[0].hour[hour].condition.code,

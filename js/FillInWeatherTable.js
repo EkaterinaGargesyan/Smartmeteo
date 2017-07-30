@@ -12,7 +12,7 @@ function addTextNode(text, cell) {
 function getDataForHeaderTableWeather(data, cell, i, indexDay) {
     var dataWeatherInDay = data.forecast.forecastday[indexDay].day;
 
-    switch (i){
+    switch(i){
         case 0:
             if(!cell.firstElementChild.innerText){
                 cell.firstElementChild.appendChild(document.createTextNode(getDate(data, indexDay)));
@@ -39,7 +39,7 @@ function getDataForTableWeather(data, cell, i, indexDay, indexRow) {
     var hours = [5, 11, 17, 23];
     var dataWeatherInHour = data.forecast.forecastday[indexDay].hour[hours[indexRow]];
 
-    switch (i){
+    switch(i){
         case 0:
             break;
         case 1:

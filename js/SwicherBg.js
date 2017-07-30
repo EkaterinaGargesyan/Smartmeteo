@@ -7,7 +7,7 @@ function toggleClassBg(bgClass) {
     container.classList.add(bgClass);
 }
 
-// Toggle class name of background in depends on time of day
+// Toggle class name of background in depends on time of day on load
 function switchBgOnLoad(data) {
     var hour = getCurrentTime(data);
 
@@ -22,6 +22,26 @@ function switchBgOnLoad(data) {
     }
     if(hour >= 0 && hour < 6){
         toggleClassBg("js-container-night");
+    }
+}
+
+// Toggle class name of background in depends on time of day on click
+function switchBgOnClick(btn) {
+    switch(btn.className){
+        case "slider__btn morning":
+            toggleClassBg("js-container-morning");
+            break;
+        case "slider__btn afternoon":
+            toggleClassBg("js-container-afternoon");
+            break;
+        case "slider__btn evening":
+            toggleClassBg("js-container-evening");
+            break;
+        case "slider__btn night":
+            toggleClassBg("js-container-night");
+            break;
+        default:
+            break;
     }
 }
 
