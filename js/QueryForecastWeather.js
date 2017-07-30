@@ -11,18 +11,22 @@ function query(place) {
     return query;
 }
 
+var dataWeather = {};
 
 //post a query
 function postQuery(coords) {
 
     //handling action on loading query response
      query(coords).addEventListener("load", function (event) {
+         localStorage.setItem("dataWeather", event.currentTarget.responseText);
+         
+         var path = document.location.pathname.split("/");
 
-       localStorage.setItem("dataWeather", event.currentTarget.responseText);
+         if(path[path.length-1] === "StartPage.html"){
+             document.location.href = "./WeatherForecastPage.html";
+         };
 
-       
-       document.location.href = "./WeatherForecastPage.html";
-
+        
     });
 }
     
