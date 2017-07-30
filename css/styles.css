@@ -225,11 +225,12 @@ a {
     padding: 5px 10px;
     font-size: 15px;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.8); }
+    color: rgba(255, 255, 255, 0.8); }
     .card .card-header a:hover {
-      background-color: rgba(255, 255, 255, 0.6); }
+      background-color: rgba(255, 255, 255, 0.6);
+      color: rgba(0, 0, 0, 0.8); }
     .card .card-header a:active {
-      color: black; }
+      color: white; }
 
 .table-weather-header,
 .table-weather {

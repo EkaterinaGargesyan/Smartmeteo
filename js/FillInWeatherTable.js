@@ -1,7 +1,7 @@
 "use strict";
 
 function addTextNode(text, cell) {
-    if(cell.firstChild.nodeType === 1){
+    if(cell.firstChild.nodeType !== 3){
         cell.insertBefore(document.createTextNode(text), cell.firstChild);
     } else {
         cell.replaceChild(document.createTextNode(text), cell.firstChild)
