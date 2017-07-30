@@ -1,13 +1,13 @@
-function setDataWeatherForCurrentDay(data, pathToIcon) {
+"use strict";
+
+function setDataWeatherForCurrentDay(data, pathToIcon, time) {
     document
         .querySelectorAll(".state-of-weather__indicators")
         .forEach(function (container, i) {
-            container.insertBefore(
-                document.createTextNode(data[i]),
-                container.firstChild
-            );
+
+            addTextNode(data[i], container);
         });
-    setIconStateOfWeather(pathToIcon, ".stateIcon img");
+    setIconStateOfWeather(pathToIcon, ".stateIcon img", time);
 }
 
 // Fill in block with weather for the current day
@@ -20,10 +20,15 @@ function fillInCurrentWeather(data) {
     ];
 
     //Fill in data at loading
-    setDataWeatherForCurrentDay(currentWeather, data.current.condition.code);
+    setDataWeatherForCurrentDay(
+        currentWeather,
+        data.current.condition.code,
+        getCurrentTime(data)
+    );
+}
 
-
-    //Fill in by click a button (time-of-day switching)
+//Fill in by click a button (time-of-day switching)
+function fillInDataByTimeOfDay(data) {
     document
         .querySelector(".slider")
         .addEventListener("click", function (event) {
@@ -37,12 +42,10 @@ function fillInCurrentWeather(data) {
                 data.forecast.forecastday["0"].hour[hour].pressure_mb
             ];
 
-            setDataWeatherForCurrentDay(weatherByHour, data.forecast.forecastday[0].hour[hour].condition.code);
+            setDataWeatherForCurrentDay(
+                weatherByHour,
+                data.forecast.forecastday[0].hour[hour].condition.code,
+                hour
+            );
         });
 }
-
-
-
-
-
-

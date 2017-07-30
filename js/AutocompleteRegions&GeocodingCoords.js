@@ -1,3 +1,5 @@
+"use strict";
+
 // Make form witn autocomplete for return place
 var autocomplete = new google.maps.places.Autocomplete(
     (document.querySelector(".select-region")),

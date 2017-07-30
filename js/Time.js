@@ -1,3 +1,5 @@
+"use strict";
+
 // Get date for fill in table of weather data
 function getDate(data, i) {
     var date = data.forecast.forecastday[i].date;
@@ -7,7 +9,7 @@ function getDate(data, i) {
 }
 
 // Get time for definition of part of the day
-function getTime(data) {
+function getCurrentTime(data) {
     var time = data.location.localtime;
     time = time.split(" ");
 

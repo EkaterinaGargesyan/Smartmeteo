@@ -1,3 +1,5 @@
+"use strict";
+
 //Query to apixu.com for getting weather data
 function query(place) {
     var query = new XMLHttpRequest();
@@ -11,18 +13,17 @@ function query(place) {
 //Post a query
 function postQuery(coords) {
 
-
     //Handling action on loading query response
     query(coords).addEventListener("load", function (event) {
         localStorage.setItem("dataWeather", event.currentTarget.responseText);
          
-        //  var path = document.location.pathname.split("/");
+        var path = document.location.pathname.split("/");
 
-        //  if(path[path.length-1] === "StartPage.html"){
-              document.location.href = "./WeatherForecastPage.html";
-        //  }else{
-        //     fillInData();
-        //  }
+        if(path[path.length-1] === "StartPage.html"){
+            document.location.href = "./WeatherForecastPage.html";
+        } else {
+            fillInData();
+        }
 
     });
 }

@@ -1,25 +1,35 @@
+"use strict";
+
+function addTextNode(text, cell) {
+    if(cell.firstChild.nodeType === 1){
+        cell.insertBefore(document.createTextNode(text), cell.firstChild);
+    } else {
+        cell.replaceChild(document.createTextNode(text), cell.firstChild)
+    }
+}
+
 // Get weather data in header table for 5 days
 function getDataForHeaderTableWeather(data, cell, i, indexDay) {
     var dataWeatherInDay = data.forecast.forecastday[indexDay].day;
 
     switch (i){
         case 0:
-            cell.firstElementChild.appendChild(document.createTextNode(getDate(data, indexDay)));
+            if(!cell.firstElementChild.innerText){
+                cell.firstElementChild.appendChild(document.createTextNode(getDate(data, indexDay)));
+            }
             break;
         case 1:
-            setIconStateOfWeather(dataWeatherInDay.condition.code, `.js-icon-header-table-${indexDay +1}`);
+            setIconStateOfWeather(
+                dataWeatherInDay.condition.code,
+                `.js-icon-header-table-${indexDay +1}`,
+                getCurrentTime(data)
+            );
             break;
         case 2:
-            cell.insertBefore(
-                document.createTextNode(dataWeatherInDay.avgtemp_c),
-                cell.firstChild
-            );
+            addTextNode(dataWeatherInDay.avgtemp_c, cell);
             break;
         case 3:
-            cell.insertBefore(
-                document.createTextNode(dataWeatherInDay.mintemp_c),
-                cell.firstChild
-            );
+            addTextNode(dataWeatherInDay.mintemp_c, cell);
             break;
     }
 }
@@ -33,19 +43,17 @@ function getDataForTableWeather(data, cell, i, indexDay, indexRow) {
         case 0:
             break;
         case 1:
-            setIconStateOfWeather(dataWeatherInHour.condition.code, `.js-icon-table-${indexDay +1}-${indexRow +1}`);
+            setIconStateOfWeather(
+                dataWeatherInHour.condition.code,
+                `.js-icon-table-${indexDay +1}-${indexRow +1}`,
+                hours[indexRow]
+            );
             break;
         case 2:
-            cell.insertBefore(
-                document.createTextNode(dataWeatherInHour.temp_c),
-                cell.firstChild
-            );
+            addTextNode(dataWeatherInHour.temp_c, cell);
             break;
         case 3:
-            cell.insertBefore(
-                document.createTextNode(dataWeatherInHour.feelslike_c),
-                cell.firstChild
-            );
+            addTextNode(dataWeatherInHour.feelslike_c, cell);
             break;
     }
 }

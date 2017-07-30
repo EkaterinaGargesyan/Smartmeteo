@@ -1,3 +1,5 @@
+"use strict";
+
 // Path to icon in depends of code, that is located in json
 var stateOfWeather = {
     codes: [
@@ -53,11 +55,11 @@ var stateOfWeather = {
 };
 
 // Get icon state of weather from array of icon
-function getIconStateOfWeather(img, index) {
+function getIconStateOfWeather(img, index, time) {
     var icon = document.querySelector(img);
 
     if(stateOfWeather.icon[index].length > 1) {
-        var lightDay = getTime(dataWeather) >= 6  && getTime(dataWeather) < 22;
+        var lightDay = time >= 5  && time < 21;
 
         lightDay
             ? icon.src = stateOfWeather.icon[index][0]
@@ -69,18 +71,18 @@ function getIconStateOfWeather(img, index) {
 }
 
 // Set icon state of weather in depends of code
-function setIconStateOfWeather(data, img) {
+function setIconStateOfWeather(data, img, time) {
     stateOfWeather.codes.forEach(function (category, index) {
         if(category.length > 1){
             category.forEach(function (code) {
                 if(data === code) {
-                    getIconStateOfWeather(img, index);
+                    getIconStateOfWeather(img, index, time);
                 }
             })
         } else {
 
             if(data === category[0]) {
-                getIconStateOfWeather(img, index);
+                getIconStateOfWeather(img, index, time);
             }
         }
     });
