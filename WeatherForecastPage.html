@@ -6,7 +6,6 @@
 
     <title>Smartmeteo - Weather forecast</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -33,8 +32,10 @@
                         </div>
 
                         <div class="slider-bar">
-                            <div class="thumb"></div>
-
+                            <div class="switcher morning invisible"></div>
+                            <div class="switcher afternoon invisible"></div>
+                            <div class="switcher evening invisible"></div>
+                            <div class="switcher night invisible"></div>
                         </div>
                     </div>
                 </div>
@@ -49,7 +50,7 @@
                     <div class="col-md-2 state-of-weather__indicators temp">
                         <span> °C</span>
                     </div>
-                    <div class="col-md-2 state-of-weather__icon stateIcon">
+                    <div class="col-md-2 state-of-weather__icon">
                         <img alt="icon">
                     </div>
                     <div class="col-md-2 state-of-weather__indicators temp-fillslike">
@@ -301,7 +302,7 @@
     <script src="./js/QueryForecastWeather.js"></script>
     <script src="./js/Time.js"></script>
 
-    <script src="./js/SwicherBg.js"></script>
+    <script src="js/SwitcherTimeOfDay.js"></script>
     <script src="js/SetIconOfWeather.js"></script>
     <script src="./js/FillInCurrentWeather.js"></script>
     <script src="./js/FillInWeatherTable.js"></script>

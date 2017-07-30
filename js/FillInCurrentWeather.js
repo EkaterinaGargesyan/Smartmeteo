@@ -7,7 +7,7 @@ function setDataWeatherForCurrentDay(data, pathToIcon, time) {
 
             addTextNode(data[i], container);
         });
-    setIconStateOfWeather(pathToIcon, ".stateIcon img", time);
+    setIconStateOfWeather(pathToIcon, ".state-of-weather__icon img", time);
 }
 
 // Fill in block with weather for the current day
@@ -42,7 +42,7 @@ function fillInDataByTimeOfDay(data) {
                 data.forecast.forecastday["0"].hour[hour].pressure_mb
             ];
 
-            switchBgOnClick(btn);
+            switchOnClick(btn);
 
             setDataWeatherForCurrentDay(
                 weatherByHour,

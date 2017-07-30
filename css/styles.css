@@ -103,7 +103,7 @@ a {
   background: url("../img/weatherForecastPage/img-morning.svg") no-repeat; }
 
 .js-container-afternoon {
-  background: url("../img/weatherForecastPage/img-arternoon.svg") no-repeat; }
+  background: url("../img/weatherForecastPage/img-afternoon.svg") no-repeat; }
 
 .js-container-evening {
   background: url("../img/weatherForecastPage/img-evening.svg") no-repeat; }
@@ -130,7 +130,7 @@ a {
 
 .slider-btns {
   width: 60vw;
-  height: 17px; }
+  height: 21px; }
 
 .slider__btn {
   position: absolute;
@@ -141,14 +141,6 @@ a {
   font-size: 15px;
   font-weight: 500;
   color: #F0F8FF; }
-  .slider__btn.morning {
-    left: 0; }
-  .slider__btn.afternoon {
-    left: 17vw; }
-  .slider__btn.evening {
-    left: 36vw; }
-  .slider__btn.night {
-    right: 0; }
   .slider__btn:hover {
     background: rgba(255, 255, 255, 0.6); }
   .slider__btn:active {
@@ -159,23 +151,28 @@ a {
   height: 6px;
   border-top: 1px solid rgba(255, 255, 255, 0.6); }
 
-.thumb {
+.switcher {
   position: absolute;
   width: 80px;
-  height: 5px;
-  background: rgba(255, 255, 255, 0.6); }
-  .thumb.morningPos {
-    left: 0;
-    transition: left 1s ease-in-out; }
-  .thumb.afternoonPos {
-    left: 17px;
-    transition: left 1s ease-in-out; }
-  .thumb.eveningPos {
-    left: 36px;
-    transition: left 1s ease-in-out; }
-  .thumb.nightPos {
-    right: 17px;
-    transition: right 1s ease-in-out; }
+  height: 5px; }
+  .switcher.visible {
+    background: rgba(255, 255, 255, 0.8);
+    transition: all .2s ease-in-out; }
+  .switcher.invisible {
+    background: rgba(255, 255, 255, 0);
+    transition: all .3s ease-in-out; }
+
+.morning {
+  left: 0; }
+
+.afternoon {
+  left: 17vw; }
+
+.evening {
+  left: 36vw; }
+
+.night {
+  right: 0; }
 
 /*============================================================================*
     @@STATE OF CURRENT WEATHER
@@ -199,6 +196,10 @@ a {
   .state-of-weather__indicators.humidity {
     background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/humidity.png") no-repeat 10% 50%;
     background-size: 70px; }
+
+.state-of-weather__icon img {
+  position: absolute;
+  z-index: 100; }
 
 /*============================================================================*
     @@ACCORDION
