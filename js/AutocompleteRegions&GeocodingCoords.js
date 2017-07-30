@@ -6,25 +6,28 @@ var autocomplete = new google.maps.places.Autocomplete(
     });
 
 // find coordinates place which user type-in search-form
-function find(address, cb) {
+
+var coords = "";
+
+function find(address) {
     var geocoder = new google.maps.Geocoder;
     geocoder.geocode({"address": address}, function(results) {
         var lat = results[0].geometry.location.lat();
         var lng = results[0].geometry.location.lng();
-        var coords =  `${lat},${lng}`;
-
-        cb(coords);
+        coords = `${lat},${lng}`;
     });
 }
 
 autocomplete.addListener("place_changed", function () {
     var placeResult = autocomplete.getPlace().formatted_address;
 
-    find(placeResult, function(coords){
-        query(coords).addEventListener("load", function () {
-
-            document.location.href = "./WeatherForecastPage.html";
-
-        });
-    });
+    find(placeResult);
 });
+
+query(coords).addEventListener("load", function () {
+    document.location.href = "./WeatherForecastPage.html";
+});
+
+
+
+
