@@ -7,14 +7,16 @@ var autocomplete = new google.maps.places.Autocomplete(
 
 // find coordinates place which user type-in search-form
 
-var coords = "";
 
 function find(address) {
     var geocoder = new google.maps.Geocoder;
     geocoder.geocode({"address": address}, function(results) {
         var lat = results[0].geometry.location.lat();
         var lng = results[0].geometry.location.lng();
-        coords = `${lat},${lng}`;
+        var coords = `${lat},${lng}`;
+        
+        //post a query
+        postQuery(coords);
     });
 }
 
@@ -24,9 +26,6 @@ autocomplete.addListener("place_changed", function () {
     find(placeResult);
 });
 
-query(coords).addEventListener("load", function () {
-    document.location.href = "./WeatherForecastPage.html";
-});
 
 
 
