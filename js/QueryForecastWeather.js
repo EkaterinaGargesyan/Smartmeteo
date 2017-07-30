@@ -7,8 +7,6 @@ function query(place) {
     return query;
 }
 
-var dataWeather = {};
-
 //post a query
 function postQuery(coords) {
 

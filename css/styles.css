@@ -99,40 +99,21 @@ a {
     @@BACKGROUND (IN DEPENDS ON PARTS OF DAY)
 
 \*============================================================================*/
-.js-container-bg-morning {
-  background: url("../img/weatherForecastPage/background-morning.jpg") no-repeat; }
+.js-container-morning {
+  background: url("../img/weatherForecastPage/img-morning.svg") no-repeat; }
 
-.js-container-bg-afternoon {
-  background: url("../img/weatherForecastPage/background-afternoon.jpg") no-repeat; }
+.js-container-afternoon {
+  background: url("../img/weatherForecastPage/img-arternoon.svg") no-repeat; }
 
-.js-container-bg-evening {
-  background: url("../img/weatherForecastPage/background-evening.jpg") no-repeat; }
+.js-container-evening {
+  background: url("../img/weatherForecastPage/img-evening.svg") no-repeat; }
 
-.js-container-bg-night {
-  background: url("../img/weatherForecastPage/background-night.jpg") no-repeat; }
+.js-container-night {
+  background: url("../img/weatherForecastPage/img-night.svg") no-repeat; }
 
 .container-bg {
   width: 100vw;
   height: 100vh;
-  background-size: cover; }
-
-.js-container-img-morning {
-  background: url("../img/weatherForecastPage/img-morning.jpg") no-repeat; }
-
-.js-container-img-afternoon {
-  background: url("../img/weatherForecastPage/img-afternoon.jpg") no-repeat; }
-
-.js-container-img-evening {
-  background: url("../img/weatherForecastPage/img-evening.jpg") no-repeat; }
-
-.js-container-img-night {
-  background: url("../img/weatherForecastPage/img-night.jpg") no-repeat; }
-
-.container-img {
-  position: absolute;
-  margin: 6vh 7vw;
-  width: 86vw;
-  height: 88vh;
   background-size: cover; }
 
 /*============================================================================*
@@ -202,7 +183,7 @@ a {
 \*============================================================================*/
 .state-of-weather {
   margin: 20px 0;
-  height: 19vh; }
+  height: 24vh; }
 
 .state-of-weather__indicators {
   border: 0.5px solid rgba(255, 255, 255, 0.4); }
@@ -231,16 +212,6 @@ a {
   font-size: 17px;
   color: #F0F8FF; }
 
-.card-header a {
-  padding: 5px 10px;
-  font-size: 15px;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.8); }
-  .card-header a:hover {
-    background-color: rgba(255, 255, 255, 0.6); }
-  .card-header a:active {
-    color: black; }
-
 .card .card-header,
 .card .card-block {
   padding: 5px;
@@ -250,6 +221,15 @@ a {
 
 .card .card-header {
   background-color: rgba(255, 255, 255, 0.3); }
+  .card .card-header a {
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8); }
+    .card .card-header a:hover {
+      background-color: rgba(255, 255, 255, 0.6); }
+    .card .card-header a:active {
+      color: black; }
 
 .table-weather-header,
 .table-weather {
@@ -259,7 +239,7 @@ a {
 
 .table-weather-header td,
 .table-weather td {
-  height: 32px;
+  height: 4.9vh;
   font-size: 15px;
   cursor: default; }
 
