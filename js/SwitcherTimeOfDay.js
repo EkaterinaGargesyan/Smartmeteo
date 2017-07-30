@@ -41,7 +41,7 @@ function switchBgOnLoad(data) {
     toogleClassSwitchOnLoad();
 }
 
-function toogleClassSwitchOnClick(btn) {
+function toogleClassSliderOnClick(btn) {
     document
         .querySelectorAll(".switcher")
         .forEach(function (switcher) {
@@ -76,7 +76,7 @@ function switchOnClick(btn) {
             break;
     }
 
-    toogleClassSwitchOnClick(btn);
+    toogleClassSliderOnClick(btn);
 }
 
 
