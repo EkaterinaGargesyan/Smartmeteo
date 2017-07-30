@@ -1,10 +1,6 @@
 function query(place) {
     var query = new XMLHttpRequest();
 
-    // query.addEventListener("load", function (event) {
-    //     localStorage.setItem("dataWeather", event.currentTarget.responseText);
-    // });
-
     query.open("GET", `https://api.apixu.com/v1/forecast.json?key=c13f00aa4d97425298872829170307&q=${place}&days=5`);
     query.send();
 
@@ -20,13 +16,14 @@ function postQuery(coords) {
      query(coords).addEventListener("load", function (event) {
          localStorage.setItem("dataWeather", event.currentTarget.responseText);
          
-         var path = document.location.pathname.split("/");
+        //  var path = document.location.pathname.split("/");
 
-         if(path[path.length-1] === "StartPage.html"){
-             document.location.href = "./WeatherForecastPage.html";
-         };
+        //  if(path[path.length-1] === "StartPage.html"){
+              document.location.href = "./WeatherForecastPage.html";
+        //  }else{
+        //     fillInData();
+        //  }
 
-        
     });
 }
     
