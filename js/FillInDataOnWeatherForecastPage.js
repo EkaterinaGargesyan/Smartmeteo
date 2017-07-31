@@ -11,7 +11,6 @@ function fillInData() {
     fillInTableWeather(dataWeather, ".table-weather-header");
     fillInTableWeather(dataWeather, ".table-weather");
     fillInDataByTimeOfDay(dataWeather);
-
 }
 
 document.addEventListener("DOMContentLoaded", function () {

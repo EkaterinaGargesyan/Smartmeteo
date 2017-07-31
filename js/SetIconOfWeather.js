@@ -17,40 +17,20 @@ var stateOfWeather = {
         [1030],
         [1114, 1117]
     ],
-    icon: [
-        [
-            "./img/iconsStateOfWeather/sunny.svg",
-            "./img/iconsStateOfWeather/moon.svg"
-        ],
-        [
-            "./img/iconsStateOfWeather/semi-cloudy.svg",
-            "./img/iconsStateOfWeather/moon-cloudy.svg"
-        ],
-        [
-            "./img/iconsStateOfWeather/cloudy.svg",
-            "./img/iconsStateOfWeather/moon-cloudy.svg"
-        ],
-        [   "./img/iconsStateOfWeather/overcast.svg" ],
-        [
-            "./img/iconsStateOfWeather/semi-sunny-with-rain.svg",
-            "./img/iconsStateOfWeather/light-rain.svg"
-        ],
-        [   "./img/iconsStateOfWeather/light-rain.svg" ],
-        [
-            "./img/iconsStateOfWeather/rain.svg"
-        ],
-        [   "./img/iconsStateOfWeather/rain-thunder.svg" ],
-        [   "./img/iconsStateOfWeather/thunder.svg" ],
-        [
-            "./img/iconsStateOfWeather/fog.svg",
-            "./img/iconsStateOfWeather/moon-cloudy.svg"
-        ],
-        [   "./img/iconsStateOfWeather/snow.svg" ],
-        [
-            "./img/iconsStateOfWeather/mist.svg",
-            "./img/iconsStateOfWeather/wind.svg"
-        ],
-        [   "./img/iconsStateOfWeather/wind.svg" ]
+    icons: [
+        ["./img/iconsStateOfWeather/sunnyIcon.svg", "./img/iconsStateOfWeather/clearNightIcon.svg"],
+        ["./img/iconsStateOfWeather/partlyCloudyIcon.svg", "./img/iconsStateOfWeather/partlyCloudyNightIcon.svg"],
+        ["./img/iconsStateOfWeather/mostlyCloudyIcon.svg", "./img/iconsStateOfWeather/partlyCloudyNightIcon.svg"],
+        ["./img/iconsStateOfWeather/mostlyCloudyIcon.svg", "./img/iconsStateOfWeather/partlyCloudyNightIcon.svg"],
+        ["./img/iconsStateOfWeather/sunnyShowersIcon.svg", "./img/iconsStateOfWeather/showersIcon.svg"],
+        ["./img/iconsStateOfWeather/showersIcon.svg"],
+        ["./img/iconsStateOfWeather/rainyIcon.svg"],
+        ["./img/iconsStateOfWeather/thundershowersIcon.svg"],
+        ["./img/iconsStateOfWeather/lightningIcon.svg"],
+        ["./img/iconsStateOfWeather/mostlyCloudyIcon.svg", "./img/iconsStateOfWeather/partlyCloudyNightIcon.svg"],
+        ["./img/iconsStateOfWeather/snowyIcon.svg"],
+        ["./img/iconsStateOfWeather/windySunnyIcon.svg", "./img/iconsStateOfWeather/windyIcon.svg"],
+        ["./img/iconsStateOfWeather/windyIcon.svg"]
     ]
 };
 
@@ -58,32 +38,33 @@ var stateOfWeather = {
 function getIconStateOfWeather(img, index, time) {
     var icon = document.querySelector(img);
 
-    if(stateOfWeather.icon[index].length > 1) {
+    if(stateOfWeather.icons[index].length > 1) {
         var lightDay = time >= 5  && time < 21;
 
         lightDay
-            ? icon.src = stateOfWeather.icon[index][0]
-            : icon.src = stateOfWeather.icon[index][1];
+        ? icon.src = stateOfWeather.icons[index][0]
+        : icon.src = stateOfWeather.icons[index][1];
 
     } else {
-        icon.src = stateOfWeather.icon[index][0];
+        icon.src = stateOfWeather.icons[index][0];
     }
 }
 
 // Set icon state of weather in depends of code
-function setIconStateOfWeather(data, img, time) {
+function setIconStateOfWeather(data, container, time) {
     stateOfWeather.codes.forEach(function (category, index) {
         if(category.length > 1){
             category.forEach(function (code) {
                 if(data === code) {
-                    getIconStateOfWeather(img, index, time);
+                    getIconStateOfWeather(container, index, time);
                 }
             })
         } else {
 
             if(data === category[0]) {
-                getIconStateOfWeather(img, index, time);
+                getIconStateOfWeather(container, index, time);
             }
         }
     });
 }
+

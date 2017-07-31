@@ -69,22 +69,22 @@ a {
   padding: 0 0 0 50px;
   width: 350px;
   height: 40px;
-  background: rgba(255, 255, 255, .4) url(../img/startPage/icon-search.svg) no-repeat 5%;
+  background: rgba(255, 255, 255, .4) url(../img/startPage/icon-search-dark.svg) no-repeat 5%;
   background-size: 25px 25px;
   border: none;
   font: {
     family: "Verdana", sans-serif;
     size: 16px;
   }
-  color: white;
 
   &::-webkit-input-placeholder {
-    color: white;
+    color: rgba(0, 0, 0, .5);
   }
 
   &:focus {
     background: rgba(0, 0, 0, .5) url(../img/startPage/icon-search.svg) no-repeat 5%;
     background-size: 25px 25px;
+    color: white;
   }
 }
 
@@ -93,8 +93,13 @@ a {
   float: right;
   width: 225px;
   height: 30px;
+  background: rgba(255, 255, 255, .4) url(../img/startPage/icon-search.svg) no-repeat 5%;
   background-size: 20px 20px;
   font-size: 14px;
+
+  &::-webkit-input-placeholder {
+    color: white;
+  }
 }
 
 /*============================================================================*\
@@ -235,6 +240,12 @@ a {
 
 .state-of-weather__indicators {
   border: .5px solid rgba(255, 255, 255, .4);
+  padding: 13vh 0 0 6.5vw;
+  color: white;
+  font: {
+    family: "Verdana", sans-serif;
+    size: 17px;
+  }
 
   &.windspeed {
     background: rgba(255, 255, 255, .2) url("../img/iconsTolls/windspeed.svg") no-repeat 10% 50%;
@@ -245,19 +256,23 @@ a {
     background-size: 60px;
 
   }
-  &.temp-fillslike {
-    background: rgba(255, 255, 255, .2) url("../img/iconsTolls/tempFeelslike.svg") no-repeat 10% 50%;
-    background-size: 80px;
-  }
   &.humidity {
-    background: rgba(255, 255, 255, .2) url("../img/iconsTolls/humidity.png") no-repeat 10% 50%;
+    background: rgba(255, 255, 255, .2) url("../img/iconsTolls/humidity.svg") no-repeat 10% 50%;
+    background-size: 70px;
+  }
+  &.pressure {
+    background: rgba(255, 255, 255, .2) url("../img/iconsTolls/pressure.svg") no-repeat 10% 50%;
     background-size: 70px;
   }
 }
 
 .state-of-weather__icon img{
   position: absolute;
+  top: -5vh;
+  left: -5vw;
   z-index: 100;
+  width: 33vw;
+  height: 33vh;
 }
 
 /*============================================================================*\
@@ -321,6 +336,7 @@ a {
   background-color: rgba(255, 255, 255, .7);
   color: rgba(0, 0, 0, .9);
 }
+
 .icon-header-table,
 .icon-table {
   width: 30px;

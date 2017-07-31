@@ -7,6 +7,7 @@ function toggleClassBg(bgClass) {
     container.classList.add(bgClass);
 }
 
+// Toggle class name of switcher on load
 function toogleClassSwitchOnLoad() {
     var bg = document.querySelector(".container-bg").classList[1].split("-");
     bg = bg[2];
@@ -14,6 +15,8 @@ function toogleClassSwitchOnLoad() {
     document
         .querySelectorAll(".switcher")
         .forEach(function (switcher) {
+            switcher.classList.remove("visible");
+
             if(bg === switcher.classList[1]) {
                 switcher.classList.remove("invisible");
                 switcher.classList.add("visible");
@@ -21,7 +24,7 @@ function toogleClassSwitchOnLoad() {
         });
 }
 
-// Toggle class name of background in depends on time of day on load
+// Toggle class name of background and switcher in depends on time of day on load
 function switchBgOnLoad(data) {
     var hour = getCurrentTime(data);
 
@@ -41,6 +44,8 @@ function switchBgOnLoad(data) {
     toogleClassSwitchOnLoad();
 }
 
+
+// Toggle class name of switcher on click
 function toogleClassSliderOnClick(btn) {
     document
         .querySelectorAll(".switcher")
@@ -57,7 +62,7 @@ function toogleClassSliderOnClick(btn) {
         });
 }
 
-// Toggle class name of background in depends on time of day on click
+// Toggle class name of background and switcher in depends on time of day on click
 function switchOnClick(btn) {
     switch(btn.className){
         case "slider__btn morning":

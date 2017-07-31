@@ -49,25 +49,28 @@ a {
   padding: 0 0 0 50px;
   width: 350px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.4) url(../img/startPage/icon-search.svg) no-repeat 5%;
+  background: rgba(255, 255, 255, 0.4) url(../img/startPage/icon-search-dark.svg) no-repeat 5%;
   background-size: 25px 25px;
   border: none;
   font-family: "Verdana", sans-serif;
-  font-size: 16px;
-  color: white; }
+  font-size: 16px; }
   .select-region::-webkit-input-placeholder {
-    color: white; }
+    color: rgba(0, 0, 0, 0.5); }
   .select-region:focus {
     background: rgba(0, 0, 0, 0.5) url(../img/startPage/icon-search.svg) no-repeat 5%;
-    background-size: 25px 25px; }
+    background-size: 25px 25px;
+    color: white; }
 
 .select-region-small-size {
   margin: 20px 2vw;
   float: right;
   width: 225px;
   height: 30px;
+  background: rgba(255, 255, 255, 0.4) url(../img/startPage/icon-search.svg) no-repeat 5%;
   background-size: 20px 20px;
   font-size: 14px; }
+  .select-region-small-size::-webkit-input-placeholder {
+    color: white; }
 
 /*============================================================================*
     @@AUTOCOMPLETE GOOGLE API
@@ -183,23 +186,31 @@ a {
   height: 24vh; }
 
 .state-of-weather__indicators {
-  border: 0.5px solid rgba(255, 255, 255, 0.4); }
+  border: 0.5px solid rgba(255, 255, 255, 0.4);
+  padding: 13vh 0 0 6.5vw;
+  color: white;
+  font-family: "Verdana", sans-serif;
+  font-size: 17px; }
   .state-of-weather__indicators.windspeed {
     background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/windspeed.svg") no-repeat 10% 50%;
     background-size: 60px; }
   .state-of-weather__indicators.temp {
     background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/temp.svg") no-repeat 10% 50%;
     background-size: 60px; }
-  .state-of-weather__indicators.temp-fillslike {
-    background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/tempFeelslike.svg") no-repeat 10% 50%;
-    background-size: 80px; }
   .state-of-weather__indicators.humidity {
-    background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/humidity.png") no-repeat 10% 50%;
+    background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/humidity.svg") no-repeat 10% 50%;
+    background-size: 70px; }
+  .state-of-weather__indicators.pressure {
+    background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/pressure.svg") no-repeat 10% 50%;
     background-size: 70px; }
 
 .state-of-weather__icon img {
   position: absolute;
-  z-index: 100; }
+  top: -5vh;
+  left: -5vw;
+  z-index: 100;
+  width: 33vw;
+  height: 33vh; }
 
 /*============================================================================*
     @@ACCORDION

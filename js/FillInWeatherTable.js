@@ -22,11 +22,11 @@ function getDataForHeaderTableWeather(data, cell, i, indexDay) {
             setIconStateOfWeather(
                 dataWeatherInDay.condition.code,
                 `.js-icon-header-table-${indexDay +1}`,
-                getCurrentTime(data)
+                12
             );
             break;
         case 2:
-            addTextNode(dataWeatherInDay.avgtemp_c, cell);
+            addTextNode(dataWeatherInDay.maxtemp_c, cell);
             break;
         case 3:
             addTextNode(dataWeatherInDay.mintemp_c, cell);

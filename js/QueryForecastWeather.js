@@ -24,7 +24,6 @@ function postQuery(coords) {
         } else {
             fillInData();
         }
-
     });
 }
     
