@@ -1,5 +1,10 @@
 "use strict";
 
+//Reset input on focus
+document.querySelector(".select-region").addEventListener("focus", function (event) {
+    event.target.value = "";
+});
+
 // Make form witn autocomplete for return place
 var autocomplete = new google.maps.places.Autocomplete(
     (document.querySelector(".select-region")),
@@ -21,8 +26,9 @@ function find(address) {
 }
 
 autocomplete.addListener("place_changed", function () {
-    var placeResult = autocomplete.getPlace().formatted_address;
+    localStorage.setItem("searchPhrase", document.querySelector(".select-region").value);
 
+    var placeResult = autocomplete.getPlace().formatted_address;
     find(placeResult);
 });
 

@@ -117,10 +117,11 @@ a {
 
 .pac-item {
   font-size: 15px;
-  color: white;
+  color: rgba(0, 0, 0, .7);
 
   &:hover {
     background: rgba(0, 0, 0, .5);
+    color: white;
   }
 }
 
@@ -269,7 +270,7 @@ a {
 .state-of-weather__icon img{
   position: absolute;
   top: -5vh;
-  left: -5vw;
+  left: -3vw;
   z-index: 100;
   width: 33vw;
   height: 33vh;

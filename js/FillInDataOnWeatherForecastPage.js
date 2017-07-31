@@ -1,10 +1,8 @@
 "use strict";
 
-var dataWeather = {};
-
 // Set all weather data on weather forecast page
 function fillInData() {
-    dataWeather = JSON.parse(localStorage.getItem("dataWeather"));
+    var dataWeather = JSON.parse(localStorage.getItem("dataWeather"));
 
     switchBgOnLoad(dataWeather);
     fillInCurrentWeather(dataWeather);
@@ -15,6 +13,7 @@ function fillInData() {
 
 document.addEventListener("DOMContentLoaded", function () {
     fillInData();
+    document.querySelector(".select-region").value = localStorage.getItem("searchPhrase");
 });
 
 
