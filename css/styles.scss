@@ -96,6 +96,7 @@ a {
   background: rgba(255, 255, 255, .4) url(../img/startPage/icon-search.svg) no-repeat 5%;
   background-size: 20px 20px;
   font-size: 14px;
+  color: white;
 
   &::-webkit-input-placeholder {
     color: white;
@@ -240,13 +241,15 @@ a {
 }
 
 .state-of-weather__indicators {
-  border: .5px solid rgba(255, 255, 255, .4);
+  top: 4vh;
+  height: 18vh;
   padding: 13vh 0 0 6.5vw;
-  color: white;
+  border: .5px solid rgba(255, 255, 255, .4);
   font: {
     family: "Verdana", sans-serif;
     size: 17px;
   }
+  color: white;
 
   &.windspeed {
     background: rgba(255, 255, 255, .2) url("../img/iconsTolls/windspeed.svg") no-repeat 10% 50%;

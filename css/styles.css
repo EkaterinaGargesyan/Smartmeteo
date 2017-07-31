@@ -68,7 +68,8 @@ a {
   height: 30px;
   background: rgba(255, 255, 255, 0.4) url(../img/startPage/icon-search.svg) no-repeat 5%;
   background-size: 20px 20px;
-  font-size: 14px; }
+  font-size: 14px;
+  color: white; }
   .select-region-small-size::-webkit-input-placeholder {
     color: white; }
 
@@ -187,11 +188,13 @@ a {
   height: 24vh; }
 
 .state-of-weather__indicators {
-  border: 0.5px solid rgba(255, 255, 255, 0.4);
+  top: 4vh;
+  height: 18vh;
   padding: 13vh 0 0 6.5vw;
-  color: white;
+  border: 0.5px solid rgba(255, 255, 255, 0.4);
   font-family: "Verdana", sans-serif;
-  font-size: 17px; }
+  font-size: 17px;
+  color: white; }
   .state-of-weather__indicators.windspeed {
     background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/windspeed.svg") no-repeat 10% 50%;
     background-size: 60px; }
