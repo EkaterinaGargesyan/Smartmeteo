@@ -270,32 +270,49 @@ a {
     @@STATE OF WEATHER ICON
 
 \*============================================================================*/
-.state-of-weather__icon img {
+.state-of-weather__icon .weathericon {
+  position: absolute;
+  top: -10vh;
+  left: -7vw;
+  z-index: 50;
+  width: 45vw;
+  height: 45vh; }
+
+.active {
+  visibility: visible; }
+
+.hidden {
+  visibility: hidden; }
+
+/*.state-of-weather__icon img {
   position: absolute;
   top: -8vh;
   left: -3vw;
   z-index: 50;
   width: 33vw;
-  height: 33vh; }
-  @media (max-width: 992px) {
-    .state-of-weather__icon img {
-      top: -6vh;
-      left: -1.5vw;
-      width: 28vw;
-      height: 28vh; } }
-  @media (max-width: 768px) {
-    .state-of-weather__icon img {
-      top: -16vh;
-      left: 18vw;
-      width: 33vw;
-      height: 33vh; } }
-  @media (max-width: 576px) {
-    .state-of-weather__icon img {
-      top: -16vh;
-      left: 33vw;
-      width: 33vw;
-      height: 33vh; } }
+  height: 33vh;
 
+  @media (max-width: $screen-md){
+    top: -6vh;
+    left: -1.5vw;
+    width: 28vw;
+    height: 28vh;
+  }
+
+  @media (max-width: $screen-sm){
+    top: -16vh;
+    left: 18vw;
+    width: 33vw;
+    height: 33vh;
+  }
+
+  @media (max-width: $screen-xs){
+    top: -16vh;
+    left: 33vw;
+    width: 33vw;
+    height: 33vh;
+  }
+}*/
 /*============================================================================*
     @@ACCORDION
 

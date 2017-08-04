@@ -347,7 +347,23 @@ a {
     @@STATE OF WEATHER ICON
 
 \*============================================================================*/
-.state-of-weather__icon img {
+.state-of-weather__icon .weathericon {
+  position: absolute;
+  top: -10vh;
+  left: -7vw;
+  z-index: 50;
+  width: 45vw;
+  height: 45vh;
+}
+
+.active {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
+}
+
+/*.state-of-weather__icon img {
   position: absolute;
   top: -8vh;
   left: -3vw;
@@ -375,7 +391,7 @@ a {
     width: 33vw;
     height: 33vh;
   }
-}
+}*/
 
 /*============================================================================*\
 

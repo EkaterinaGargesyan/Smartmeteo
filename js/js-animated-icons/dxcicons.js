@@ -64,10 +64,10 @@ window.addEventListener('load', function(){
 		};
 	});
 });
-function makeVisible(appended, vis)
+/*function makeVisible(appended, vis)
 {
 	appended.attr({visibility:vis});//this is because stupic safari shows them for exactly 1 frame
-}
+}*/
 
 
 var currentWaypoints = 0;
@@ -128,10 +128,10 @@ function determineIcon(index, toLoad, f, elem)
 				}
 			});
 		}
-		
-		setTimeout(function(){
+
+		/*setTimeout(function(){
 			makeVisible(f, "visible");
-		}, 30);
+		}, 30);*/
 
 		var waypoint = new Waypoint({
 		  element: elem,
@@ -160,6 +160,7 @@ function animationComplete(index, isActive)
 	}
 }
 //start the icons over
+/*
 function restartIcons(iconToRestart)
 {
 	for (var j = 0; j < iconToRestart.length; j++) {
@@ -167,12 +168,12 @@ function restartIcons(iconToRestart)
 		resetLines(iconToRestart[j]);
 	};
 	//if(linesToReset[iconToRestart].length > 0)
-	
+
 	(function myLoop(i){
 		setTimeout(function(){
 			makeVisible(allIconsF[iconToRestart[iconToRestart.length - i]], "visible");
 			tls[iconToRestart[iconToRestart.length - i]].restart();
-			if (--i) myLoop(i);  
+			if (--i) myLoop(i);
 		},delayBetweenIcons*1000)
 	})(iconToRestart.length);
-}
+}*/

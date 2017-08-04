@@ -1,13 +1,12 @@
 "use strict";
 
-function setDataWeatherForCurrentDay(data, pathToIcon, time) {
+function setDataWeatherForCurrentDay(data, pathToCode, time) {
     document
         .querySelectorAll(".state-of-weather__indicators")
         .forEach(function (container, i) {
-
             addTextNode(data[i], container);
         });
-    setAnimatedIconStateOfWeather(pathToIcon, ".state-of-weather__icon", time);
+    setAnimatedIconStateOfWeather(pathToCode, ".weathericon", time);
 }
 
 // Fill in block with weather for the current day
