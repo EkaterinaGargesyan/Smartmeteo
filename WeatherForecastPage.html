@@ -6,6 +6,7 @@
 
     <title>Smartmeteo - Weather forecast</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/dxcweathericons.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -50,9 +51,7 @@
                     <div class="col-6 col-sm-6 col-md-2 col-lg-2 state-of-weather__indicators temp">
                         <span> °C</span>
                     </div>
-                    <div class="col-md-4 col-lg-4 state-of-weather__icon">
-                        <img alt="" class="container-img">
-                    </div>
+                    <div class="col-md-4 col-lg-4 state-of-weather__icon"></div>
                     <div class="col-6 col-sm-6 col-md-2 col-lg-2 state-of-weather__indicators humidity">
                         <span> %</span>
                     </div>
@@ -302,12 +301,18 @@
     <script src="./js/QueryForecastWeather.js"></script>
     <script src="./js/Time.js"></script>
 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="./js/js-animated-icons/dxcicons.js"></script>
+    <script src="./js/js-animated-icons/dxcweathericons.js"></script>
+    <script src="./js/js-animated-icons/noframework.waypoints.min.js"></script>
+    <script src="./js/js-animated-icons/snap.svg-min.js"></script>
+
     <script src="./js/SwitcherTimeOfDay.js"></script>
-    <script src="./js/SetIconOfWeather.js"></script>
+    <script src="./js/StateOfWeather.js"></script>
+    <script src="./js/SetAnimatedIconOfWeather.js"></script>
+    <script src="./js/SetIconOfWeatherForTable.js"></script>
     <script src="./js/FillInCurrentWeather.js"></script>
     <script src="./js/FillInWeatherTable.js"></script>
     <script src="./js/FillInDataOnWeatherForecastPage.js"></script>
-
-
 </body>
 </html>

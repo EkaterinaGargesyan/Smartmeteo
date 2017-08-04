@@ -7,7 +7,7 @@ function setDataWeatherForCurrentDay(data, pathToIcon, time) {
 
             addTextNode(data[i], container);
         });
-    setIconStateOfWeather(pathToIcon, ".container-img", time);
+    setAnimatedIconStateOfWeather(pathToIcon, ".state-of-weather__icon", time);
 }
 
 // Fill in block with weather for the current day
