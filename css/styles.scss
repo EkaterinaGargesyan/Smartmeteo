@@ -349,11 +349,32 @@ a {
 \*============================================================================*/
 .state-of-weather__icon .weathericon {
   position: absolute;
-  top: -10vh;
-  left: -7vw;
+  top: -16vh;
+  left: -10vw;
   z-index: 50;
-  width: 45vw;
-  height: 45vh;
+  width: 50vw;
+  height: 50vh;
+
+  @media (max-width: $screen-md){
+    top: -13vh;
+    left: -10vw;
+    width: 45vw;
+    height: 45vh;
+  }
+
+  @media (max-width: $screen-sm){
+    top: -20vh;
+    left: 15vw;
+    width: 40vw;
+    height: 40vh;
+  }
+
+  @media (max-width: $screen-xs){
+    top: -26vh;
+    left: 23vw;
+    width: 55vw;
+    height: 55vh;
+  }
 }
 
 .active {
@@ -362,36 +383,6 @@ a {
 .hidden {
   visibility: hidden;
 }
-
-/*.state-of-weather__icon img {
-  position: absolute;
-  top: -8vh;
-  left: -3vw;
-  z-index: 50;
-  width: 33vw;
-  height: 33vh;
-
-  @media (max-width: $screen-md){
-    top: -6vh;
-    left: -1.5vw;
-    width: 28vw;
-    height: 28vh;
-  }
-
-  @media (max-width: $screen-sm){
-    top: -16vh;
-    left: 18vw;
-    width: 33vw;
-    height: 33vh;
-  }
-
-  @media (max-width: $screen-xs){
-    top: -16vh;
-    left: 33vw;
-    width: 33vw;
-    height: 33vh;
-  }
-}*/
 
 /*============================================================================*\
 
