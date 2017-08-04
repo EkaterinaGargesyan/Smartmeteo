@@ -56,9 +56,9 @@ a {
     color: white; }
   @media (max-width: 768px) {
     .select-region {
-      width: 400px;
-      height: 50px;
-      font-size: 20px; } }
+      width: 450px;
+      height: 70px;
+      font-size: 25px; } }
   @media (max-width: 576px) {
     .select-region {
       width: 350px; } }
@@ -228,21 +228,29 @@ a {
     @media (max-width: 768px) {
       .state-of-weather__indicators.windspeed {
         padding: 13vh 0 0 4vw; } }
+    @media (max-width: 576px) {
+      .state-of-weather__indicators.windspeed {
+        background-position: 10% 10%; } }
   .state-of-weather__indicators.temp {
     background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/temp.svg") no-repeat 10% 50%;
     background-size: 60px; }
     @media (max-width: 768px) {
       .state-of-weather__indicators.temp {
         padding: 13vh 4vw 0 0;
-        background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/temp.svg") no-repeat 90% 45%;
-        background-size: 55px;
+        background-position: 90% 45%;
         text-align: right; } }
+    @media (max-width: 576px) {
+      .state-of-weather__indicators.temp {
+        background-position: 90% 10%; } }
   .state-of-weather__indicators.humidity {
     background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/humidity.svg") no-repeat 10% 50%;
     background-size: 65px; }
     @media (max-width: 768px) {
       .state-of-weather__indicators.humidity {
         padding: 13vh 0 0 4vw; } }
+    @media (max-width: 576px) {
+      .state-of-weather__indicators.humidity {
+        background-position: 10% 10%; } }
   .state-of-weather__indicators.pressure {
     background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/pressure.svg") no-repeat 10% 50%;
     background-size: 70px; }
@@ -252,9 +260,11 @@ a {
     @media (max-width: 768px) {
       .state-of-weather__indicators.pressure {
         padding: 13vh 3vw 0 0;
-        background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/pressure.svg") no-repeat 90% 50%;
-        background-size: 70px;
+        background-position: 90% 50%;
         text-align: right; } }
+    @media (max-width: 576px) {
+      .state-of-weather__indicators.pressure {
+        background-position: 90% 20%; } }
 
 /*============================================================================*
     @@STATE OF WEATHER ICON

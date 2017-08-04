@@ -77,9 +77,9 @@ a {
   }
 
   @media (max-width: $screen-sm) {
-    width: 400px;
-    height: 50px;
-    font-size: 20px;
+    width: 450px;
+    height: 70px;
+    font-size: 25px;
   }
   @media (max-width: $screen-xs) {
     width: 350px;
@@ -288,6 +288,10 @@ a {
     @media (max-width: $screen-sm) {
       padding: 13vh 0 0 4vw;
     }
+    
+    @media (max-width: $screen-xs) {
+      background-position: 10% 10%;
+    }
   }
   
   &.temp {
@@ -296,9 +300,12 @@ a {
 
     @media (max-width: $screen-sm) {
       padding: 13vh 4vw 0 0;
-      background: rgba(255, 255, 255, .2) url("../img/iconsTolls/temp.svg") no-repeat 90% 45%;
-      background-size: 55px;
+      background-position: 90% 45%;
       text-align: right;
+    }
+
+    @media (max-width: $screen-xs) {
+      background-position: 90% 10%;
     }
   }
 
@@ -308,6 +315,10 @@ a {
 
     @media (max-width: $screen-sm) {
       padding: 13vh 0 0 4vw;
+    }
+
+    @media (max-width: $screen-xs) {
+      background-position: 10% 10%;
     }
   }
 
@@ -321,9 +332,12 @@ a {
 
     @media (max-width: $screen-sm) {
       padding: 13vh 3vw 0 0;
-      background: rgba(255, 255, 255, .2) url("../img/iconsTolls/pressure.svg") no-repeat 90% 50%;
-      background-size: 70px;
+      background-position: 90% 50%;
       text-align: right;
+    }
+
+    @media (max-width: $screen-xs) {
+      background-position: 90% 20%;
     }
   }
 }
