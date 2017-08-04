@@ -25,21 +25,14 @@ a {
   height: 100vh;
   background: url(../img/startPage/start-img.svg) no-repeat;
   background-size: cover;
-  text-align: center;
-  /*============================================================================*
-    @@START PAGE @media
-
-\*============================================================================*/ }
+  text-align: center; }
   .start-page .logo {
     display: block;
     margin: 0 auto 5vh auto;
     width: 370px; }
-  @media (max-width: 576px) {
-    .start-page .start-page__logo {
-      width: 290px; }
-    .start-page .select-region {
-      width: 250px;
-      padding: 0 0 0 40px; } }
+    @media (max-width: 576px) {
+      .start-page .logo {
+        width: 290px; } }
 
 /*============================================================================*
     @@INPUT SELECT-REGION
@@ -55,16 +48,25 @@ a {
   font-family: "Verdana", sans-serif;
   font-size: 16px; }
   .select-region[placeholder] {
+    text-overflow: ellipsis;
     color: rgba(0, 0, 0, 0.5); }
   .select-region:focus {
     background: rgba(0, 0, 0, 0.5) url(../img/startPage/icon-search.svg) no-repeat 5%;
     background-size: 25px 25px;
     color: white; }
+  @media (max-width: 768px) {
+    .select-region {
+      width: 400px;
+      height: 50px;
+      font-size: 20px; } }
+  @media (max-width: 576px) {
+    .select-region {
+      width: 350px; } }
 
 .select-region-small-size {
-  margin: 20px 2vw;
+  margin: 20px 2vw 20px 0;
   float: right;
-  width: 225px;
+  width: 275px;
   height: 30px;
   background: rgba(255, 255, 255, 0.4) url(../img/startPage/icon-search.svg) no-repeat 5%;
   background-size: 20px 20px;
@@ -73,6 +75,16 @@ a {
   .select-region-small-size[placeholder] {
     text-overflow: ellipsis;
     color: white; }
+  @media (max-width: 768px) {
+    .select-region-small-size {
+      margin: 2vh auto;
+      padding: 0 0 0 70px;
+      width: 100%;
+      height: 50px;
+      font-size: 20px; } }
+  @media (max-width: 576px) {
+    .select-region-small-size {
+      margin: .5vh auto; } }
 
 /*============================================================================*
     @@AUTOCOMPLETE GOOGLE API
@@ -80,8 +92,7 @@ a {
 \*============================================================================*/
 .pac-container {
   background: rgba(255, 255, 255, 0.4);
-  font-family: "Verdana", sans-serif;
-  font-size: 15px; }
+  font-family: "Verdana", sans-serif; }
 
 .pac-item {
   font-size: 15px;
@@ -99,6 +110,13 @@ a {
 
 .pac-icon {
   background: url("../img/startPage/icon-location.svg") no-repeat; }
+
+@media (max-width: 768px) {
+  .pac-container {
+    background: rgba(255, 255, 255, 0.4);
+    font-size: 18px; }
+  .pac-item {
+    height: 50px; } }
 
 /*============================================================================*
     @@WEATHER FORECAST PAGE
@@ -130,6 +148,9 @@ a {
   margin: 0 auto;
   width: 60vw;
   height: 25px; }
+  @media (max-width: 768px) {
+    .slider {
+      display: none; } }
 
 .slider-btns {
   width: 60vw;
@@ -183,11 +204,15 @@ a {
 
 \*============================================================================*/
 .state-of-weather {
-  margin: 20px 0;
-  height: 24vh; }
+  margin: 6vh 0; }
+  @media (max-width: 768px) {
+    .state-of-weather {
+      margin: 0 0 2vh 0; } }
+  @media (max-width: 576px) {
+    .state-of-weather {
+      margin: 0 0 .5vh 0; } }
 
 .state-of-weather__indicators {
-  top: 4vh;
   height: 18vh;
   padding: 13vh 0 0 6.5vw;
   border: 0.5px solid rgba(255, 255, 255, 0.4);
@@ -197,23 +222,69 @@ a {
   .state-of-weather__indicators.windspeed {
     background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/windspeed.svg") no-repeat 10% 50%;
     background-size: 60px; }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .state-of-weather__indicators.windspeed {
+        padding: 13vh 0 0 1vw; } }
+    @media (max-width: 768px) {
+      .state-of-weather__indicators.windspeed {
+        padding: 13vh 0 0 4vw; } }
   .state-of-weather__indicators.temp {
     background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/temp.svg") no-repeat 10% 50%;
     background-size: 60px; }
+    @media (max-width: 768px) {
+      .state-of-weather__indicators.temp {
+        padding: 13vh 4vw 0 0;
+        background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/temp.svg") no-repeat 90% 45%;
+        background-size: 55px;
+        text-align: right; } }
   .state-of-weather__indicators.humidity {
     background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/humidity.svg") no-repeat 10% 50%;
-    background-size: 70px; }
+    background-size: 65px; }
+    @media (max-width: 768px) {
+      .state-of-weather__indicators.humidity {
+        padding: 13vh 0 0 4vw; } }
   .state-of-weather__indicators.pressure {
     background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/pressure.svg") no-repeat 10% 50%;
     background-size: 70px; }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .state-of-weather__indicators.pressure {
+        padding: 13vh 0 0 1vw; } }
+    @media (max-width: 768px) {
+      .state-of-weather__indicators.pressure {
+        padding: 13vh 3vw 0 0;
+        background: rgba(255, 255, 255, 0.2) url("../img/iconsTolls/pressure.svg") no-repeat 90% 50%;
+        background-size: 70px;
+        text-align: right; } }
 
+/*============================================================================*
+    @@STATE OF WEATHER ICON
+
+\*============================================================================*/
 .state-of-weather__icon img {
   position: absolute;
-  top: -5vh;
+  top: -8vh;
   left: -3vw;
   z-index: 50;
   width: 33vw;
   height: 33vh; }
+  @media (max-width: 992px) {
+    .state-of-weather__icon img {
+      top: -6vh;
+      left: -1.5vw;
+      width: 28vw;
+      height: 28vh; } }
+  @media (max-width: 768px) {
+    .state-of-weather__icon img {
+      top: -16vh;
+      left: 18vw;
+      width: 33vw;
+      height: 33vh; } }
+  @media (max-width: 576px) {
+    .state-of-weather__icon img {
+      top: -16vh;
+      left: 33vw;
+      width: 33vw;
+      height: 33vh; } }
 
 /*============================================================================*
     @@ACCORDION

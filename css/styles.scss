@@ -41,23 +41,11 @@ a {
     display: block;
     margin: 0 auto 5vh auto;
     width: 370px;
-  }
 
-/*============================================================================*\
-
-    @@START PAGE @media
-
-\*============================================================================*/
     @media (max-width: $screen-xs) {
-      & .start-page__logo {
-        width: 290px;
-      }
-
-      & .select-region {
-        width: 250px;
-        padding: 0 0 0 40px;
-      }
+      width: 290px;
     }
+  }
 }
 
 /*============================================================================*\
@@ -78,6 +66,7 @@ a {
   }
 
   &[placeholder] {
+    text-overflow: ellipsis;
     color: rgba(0, 0, 0, .5);
   }
 
@@ -86,12 +75,21 @@ a {
     background-size: 25px 25px;
     color: white;
   }
+
+  @media (max-width: $screen-sm) {
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+  }
+  @media (max-width: $screen-xs) {
+    width: 350px;
+  }
 }
 
 .select-region-small-size {
-  margin: 20px 2vw;
+  margin: 20px 2vw 20px 0;
   float: right;
-  width: 225px;
+  width: 275px;
   height: 30px;
   background: rgba(255, 255, 255, .4) url(../img/startPage/icon-search.svg) no-repeat 5%;
   background-size: 20px 20px;
@@ -102,6 +100,18 @@ a {
     text-overflow: ellipsis;
     color: white;
   }
+
+  @media (max-width: $screen-sm) {
+    margin: 2vh auto;
+    padding: 0 0 0 70px;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  @media (max-width: $screen-xs) {
+    margin: .5vh auto;
+  }
 }
 
 /*============================================================================*\
@@ -111,10 +121,7 @@ a {
 \*============================================================================*/
 .pac-container {
   background: rgba(255, 255, 255, .4);
-  font: {
-    family: "Verdana", sans-serif;
-    size: 15px;
-  }
+  font-family: "Verdana", sans-serif;
 }
 
 .pac-item {
@@ -138,6 +145,16 @@ a {
 
 .pac-icon {
   background: url("../img/startPage/icon-location.svg") no-repeat;
+}
+
+@media (max-width: $screen-sm) {
+  .pac-container {
+    background: rgba(255, 255, 255, .4);
+    font-size: 18px;
+  }
+  .pac-item {
+    height: 50px;
+  }
 }
 
 /*============================================================================*\
@@ -175,6 +192,10 @@ a {
   margin: 0 auto;
   width: 60vw;
   height: 25px;
+
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
 }
 
 .slider-btns{
@@ -228,18 +249,25 @@ a {
 .afternoon { left: 17vw; }
 .evening { left: 36vw; }
 .night { right: 0; }
+
 /*============================================================================*\
 
     @@STATE OF CURRENT WEATHER
 
 \*============================================================================*/
 .state-of-weather{
-  margin: 20px 0;
-  height: 24vh;
+  margin: 6vh 0;
+
+  @media (max-width: $screen-sm) {
+    margin: 0 0 2vh 0;
+  }
+
+  @media (max-width: $screen-xs) {
+    margin: 0 0 .5vh 0;
+  }
 }
 
 .state-of-weather__indicators {
-  top: 4vh;
   height: 18vh;
   padding: 13vh 0 0 6.5vw;
   border: .5px solid rgba(255, 255, 255, .4);
@@ -252,29 +280,87 @@ a {
   &.windspeed {
     background: rgba(255, 255, 255, .2) url("../img/iconsTolls/windspeed.svg") no-repeat 10% 50%;
     background-size: 60px;
+
+    @media (min-width: $screen-sm) and (max-width: $screen-md) {
+      padding: 13vh 0 0 1vw;
+    }
+
+    @media (max-width: $screen-sm) {
+      padding: 13vh 0 0 4vw;
+    }
   }
+  
   &.temp {
     background: rgba(255, 255, 255, .2) url("../img/iconsTolls/temp.svg") no-repeat 10% 50%;
     background-size: 60px;
 
+    @media (max-width: $screen-sm) {
+      padding: 13vh 4vw 0 0;
+      background: rgba(255, 255, 255, .2) url("../img/iconsTolls/temp.svg") no-repeat 90% 45%;
+      background-size: 55px;
+      text-align: right;
+    }
   }
+
   &.humidity {
     background: rgba(255, 255, 255, .2) url("../img/iconsTolls/humidity.svg") no-repeat 10% 50%;
-    background-size: 70px;
+    background-size: 65px;
+
+    @media (max-width: $screen-sm) {
+      padding: 13vh 0 0 4vw;
+    }
   }
+
   &.pressure {
     background: rgba(255, 255, 255, .2) url("../img/iconsTolls/pressure.svg") no-repeat 10% 50%;
     background-size: 70px;
+
+    @media (min-width: $screen-sm) and (max-width: $screen-md) {
+      padding: 13vh 0 0 1vw;
+    }
+
+    @media (max-width: $screen-sm) {
+      padding: 13vh 3vw 0 0;
+      background: rgba(255, 255, 255, .2) url("../img/iconsTolls/pressure.svg") no-repeat 90% 50%;
+      background-size: 70px;
+      text-align: right;
+    }
   }
 }
 
-.state-of-weather__icon img{
+/*============================================================================*\
+
+    @@STATE OF WEATHER ICON
+
+\*============================================================================*/
+.state-of-weather__icon img {
   position: absolute;
-  top: -5vh;
+  top: -8vh;
   left: -3vw;
   z-index: 50;
   width: 33vw;
   height: 33vh;
+
+  @media (max-width: $screen-md){
+    top: -6vh;
+    left: -1.5vw;
+    width: 28vw;
+    height: 28vh;
+  }
+
+  @media (max-width: $screen-sm){
+    top: -16vh;
+    left: 18vw;
+    width: 33vw;
+    height: 33vh;
+  }
+
+  @media (max-width: $screen-xs){
+    top: -16vh;
+    left: 33vw;
+    width: 33vw;
+    height: 33vh;
+  }
 }
 
 /*============================================================================*\
