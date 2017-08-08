@@ -306,6 +306,9 @@ a {
     @@ACCORDION
 
 \*============================================================================*/
+.accordion {
+  z-index: 100; }
+
 .card {
   background-color: rgba(0, 0, 0, 0.4);
   border: none;
